@@ -33,7 +33,7 @@ class TextFormattingPrettifyJson(sublime_plugin.TextCommand):
                 sublime.status_message(error)
         self.view.end_edit(e)
 
-    def run_each(self, edit, region, maxlength=80):
+    def run_each(self, edit, region, maxlength=78):
         if region.empty():
             return
 
@@ -63,7 +63,7 @@ class TextFormattingMaxlengthCommand(sublime_plugin.TextCommand):
                 sublime.status_message(error)
         self.view.end_edit(e)
 
-    def run_each(self, edit, region, maxlength=80):
+    def run_each(self, edit, region, maxlength=78):
         if region.empty():
             region = self.view.line(region)
 
